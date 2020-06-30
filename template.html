@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Template No1</title>
+  <link rel="stylesheet" href="template.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-wrapper">
+      <p>HELLO, IT'S ME</p>
+      <h1>JOHN DOE</h1>
+      <p>UI/UX DESIGNER - DEVELOPER</p>
+      <div class="button">
+        <a href="" id="readmore">READ MORE</a>
+        <a href="" id="myworks">MY WORKS</a>
+      </div>
+      <!-- <input type="checkbox" name="slider" id="slide-button"> -->
+      <div class="slide-down">
+        <span class="circle"></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <img src="/img/mypic.png" alt="Profile Picture" id="profile-pic">
+      <h3>PERSONAL INFO</h3>
+      <hr>
+      <ul>
+        <li>NAME:</li>
+        <li>John Doe</li>
+        <li>E-MAIL:</li>
+        <li>cherwenm@gmail.com</li>
+        <li>PHONE NUMBER:</li>
+        <li>+63912-706-8621</li>
+        <li>WEBSITE:</li>
+        <li>awen.com</li>
+      </ul>
+    </article>
+    <aside>
+      <h2>JOHN DOE</h2>
+      <hr>
+      <p>Web and App Developer</p><br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis! Quae quidem incidunt voluptatibus
+        dolorum voluptate illo perferendis, sapiente nemo repellendus nisi. Atque reiciendis eos eum est fuga, id unde.
+      </p>
+      <dl class="desc-list">
+        <dt>WMO AM I 1?
+          <dd>1 Laudantium veniam illum dolor exercitationem, molestiae voluptates rem quos consequatur
+            dolorum minus. Officiis illum quo, perferendis quis omnis hic consectetur autem ut.</dd>
+        </dt>
+        <dt>WMO AM I 2?</dt>
+        <dd>2 Laudantium veniam illum dolor exercitationem, molestiae voluptates rem quos consequatur dolorum minus.
+          Officiis illum quo, perferendis quis omnis hic consectetur autem ut.</dd>
+        <dt>WMO AM I 3?</dt>
+        <dd>3 Laudantium veniam illum dolor exercitationem, molestiae voluptates rem quos consequatur dolorum minus.
+          Officiis illum quo, perferendis quis omnis hic consectetur autem ut.</dd>
+        <dt>WMO AM I 4?</dt>
+        <dd>4 Laudantium veniam illum dolor exercitationem, molestiae voluptates rem quos consequatur dolorum minus.
+          Officiis illum quo, perferendis quis omnis hic consectetur autem ut.</dd>
+      </dl>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="icon-wrapper">
+      <div class="icon">
+        <i>ICON</i>
+        <h3>6853</h3>
+        <p>Lines of Code</p>
+      </div>
+      <div class="icon">
+        <i>ICON</i>
+        <h3>120</h3>
+        <p>Projects Done</p>
+      </div>
+      <div class="icon">
+        <i>ICON</i>
+        <h3>345</h3>
+        <p>Cup of Coffee</p>
+      </div>
+      <div class="icon">
+        <i>ICON</i>
+        <h3>195</h3>
+        <p>Satisfied Customer</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+  "use strict";
+    var tab = document.querySelectorAll('.desc-list dt');
+    
+    // for (let i = 0; i < tab.length; i++) {
+    //   var tabLink = tab[i];
+    //   setAccordionHandler(tabLink, i); // Passing an argument from tabLink to tabClick in setAccordionHandler
+    // }
+    // function setAccordionHandler(tabClick, panelActive, i) {
+    //   tabClick.addEventListener('click', function(e){
+    //     for(i=0; i<tab.length; i++){
+    //       tab[i].className = '';
+    //     }
+    //     tabClick.className  = 'tab-active';
+
+    //     for(i=0; i<panel.length; i++){
+    //       panel[i].className = '';
+    //     }
+    //     panel[panelActive].className = 'panel-active';
+    //   });
+    // }
+    for(let i=0; i<tab.length; i++){
+      var panel = document.querySelectorAll('dd');
+      var tabLink = tab[i];
+      tabLink.addEventListener('click', function(e){
+        e.currentTarget.classList.toggle('tab-active');
+        if(e.currentTarget){ // if na click ang target
+          // ang i drea is parameter nga gekan sa tab[i] which is our target
+          panel[i].classList.toggle('panel-active');
+        }
+        
+      }); 
+    }
+    
+
+    var slide = document.querySelector('.slide-down').addEventListener('click', function(e){
+      var circle = document.querySelector('.circle');
+      circle.classList.toggle('-active');
+      this.classList.toggle('--active');
+    })
+  </script>
+</body>
+
+</html>
